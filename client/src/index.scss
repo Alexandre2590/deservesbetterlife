@@ -1,6 +1,6 @@
 // --------------------
 // Definition of variables
-$primary: #32c3ff;
+$primary: #415873;
 
 // ----------------------------------------
 // To install Boostrap:
@@ -42,9 +42,16 @@ body {
   text-align: center;
 
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+    // animation: App-logo-spin infinite 20s linear;
+    height: 180px;
   }
+
+  .App-logo1 {
+    // animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+    z-index: 0;
+  }
+
 
   .App-header {
     background-color: $primary;
@@ -61,6 +68,32 @@ body {
       font-weight: bold;
     }
   }
+  .App-header1 {
+    background-color: $primary;
+    // padding: 20px;
+    color: white;
+    display: flex;
+    
+    
+    .App-header1-2 {
+     
+      margin: auto;
+
+    }
+    
+
+    a {
+      color: white;
+      padding: 0 20px;
+      text-decoration: unset;
+    
+    }
+
+    a.active {
+      font-weight: bold;
+    }
+  }
+
 
   .App-title {
     font-size: 1.5em;
@@ -96,4 +129,57 @@ body {
     font-size: 1.2em;
     color: $primary;
   }
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 2px solid $primary;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color:$primary;
+}
+
+.searchButton {
+  width: 40px;
+  height: 34px;
+  border: 3px solid$primary;
+  background: white;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fa-search{
+  color: $primary;
 }

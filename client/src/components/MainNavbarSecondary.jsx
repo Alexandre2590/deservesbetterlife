@@ -1,6 +1,6 @@
 import React from 'react'
 import api from '../api'
-import logo from '../logo.svg'
+import logo from '../logo1.svg'
 import { Link, NavLink } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
@@ -10,11 +10,10 @@ function MainNavbar(props) {
   }
   return (
     <>
-    <img src={logo} className="App-logo" alt="logo" />
-    <nav className="App-header">
-  
-      <h1 className="App-title">DeservesBetterLife</h1>
-      <NavLink to="/" exact>
+    <nav className="App-header1">
+    <img src={logo} className="App-logo1" alt="logo" />
+    <nav className="App-header1-2">
+    <NavLink to="/" exact>
         Home
       </NavLink>
       <NavLink to="/countries">Countries</NavLink>
@@ -27,6 +26,8 @@ function MainNavbar(props) {
         </Link>
       )}
       <NavLink to="/secret">Secret</NavLink>
+    </nav>
+      
     </nav>
     </>
   )

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { withRouter } from 'react-router'
 import MainNavbar from './MainNavbar'
+import MainNavbarSecondary from './MainNavbarSecondary'
 import Home from './pages/Home'
 import Countries from './pages/Countries'
 import AddCountry from './pages/AddCountry'
@@ -8,10 +10,11 @@ import Secret from './pages/Secret'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 
-export default function App() {
+function App() {
   return (
     <div className="App">
-      <MainNavbar />
+      {window.location.pathname === '/' && <MainNavbar />}
+      {window.location.pathname !== '/' && <MainNavbarSecondary />}
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/countries" component={Countries} />
@@ -24,3 +27,5 @@ export default function App() {
     </div>
   )
 }
+
+export default withRouter(App)

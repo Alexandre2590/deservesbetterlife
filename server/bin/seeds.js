@@ -12,7 +12,7 @@ const User = require('../models/User')
 
 const bcryptSalt = 10
 
-require('../configs/database')
+require('./configs/database')
 
 let users = [
   {
