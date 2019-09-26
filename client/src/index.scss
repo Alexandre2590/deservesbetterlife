@@ -52,7 +52,6 @@ body {
     z-index: 0;
   }
 
-
   .App-header {
     background-color: $primary;
     padding: 20px;
@@ -73,27 +72,21 @@ body {
     // padding: 20px;
     color: white;
     display: flex;
-    
-    
-    .App-header1-2 {
-     
-      margin: auto;
 
+    .App-header1-2 {
+      margin: auto;
     }
-    
 
     a {
       color: white;
       padding: 0 20px;
       text-decoration: unset;
-    
     }
 
     a.active {
       font-weight: bold;
     }
   }
-
 
   .App-title {
     font-size: 1.5em;
@@ -131,10 +124,9 @@ body {
   }
 }
 
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
+body {
   background: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
 }
@@ -153,11 +145,11 @@ body{
   height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9DBFAF;
+  color: #9dbfaf;
 }
 
-.searchTerm:focus{
-  color:$primary;
+.searchTerm:focus {
+  color: $primary;
 }
 
 .searchButton {
@@ -173,13 +165,21 @@ body{
 }
 
 /*Resize the wrap to see the search bar change!*/
-.wrap{
+.wrap {
   width: 30%;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.fa-search{
+.fa-search {
   color: $primary;
+}
+
+.countryBox {
+  display: block;
+  width: 65vh;
+  margin-bottom: 2em;
+  display: flex;
+  margin: auto;
 }
