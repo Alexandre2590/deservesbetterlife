@@ -1,5 +1,6 @@
 const path = require('path')
 require('dotenv').config({ path: path.join(__dirname, '../.env') })
+require('../configs/database')
 
 // Seeds file that remove all users and create 2 new users
 
@@ -7,31 +8,22 @@ require('dotenv').config({ path: path.join(__dirname, '../.env') })
 // $ node bin/seeds.js
 
 const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
-const User = require('../models/User')
+
+const Country = require('../models/Country')
 
 const bcryptSalt = 10
 
-require('./configs/database')
+var countries = require('../models/countrieslife')
 
-let users = [
-  {
-    username: 'alice',
-    password: bcrypt.hashSync('alice', bcrypt.genSaltSync(bcryptSalt)),
-  },
-  {
-    username: 'bob',
-    password: bcrypt.hashSync('bob', bcrypt.genSaltSync(bcryptSalt)),
-  },
-]
-
-User.deleteMany()
+// countries = JSON.parse(countries)
+// console.log(countries)
+Country.deleteMany()
   .then(() => {
-    return User.create(users)
+    return Country.create(countries)
   })
-  .then(usersCreated => {
-    console.log(`${usersCreated.length} users created with the following id:`)
-    console.log(usersCreated.map(u => u._id))
+  .then(countries => {
+    console.log(`${countries.length} users created with the following id:`)
+    console.log(countries.map(u => u._id))
   })
   .then(() => {
     // Close properly the connection to Mongoose

@@ -3,10 +3,11 @@ import api from '../../api'
 
 export default function AddCountry(props) {
   const [state, setState] = useState({
-    name: '',
-    capitals: '',
-    area: '',
-    description: '',
+    company: '',
+    position: '',
+    city: '',
+    salary: '',
+    jobDescription: '',
   })
   const [message, setMessage] = useState(null)
 
@@ -21,24 +22,27 @@ export default function AddCountry(props) {
 
   function handleClick(e) {
     e.preventDefault()
-    console.log(state.name, state.description)
+    console.log(state.company, state.jobDescription)
     let data = {
-      name: state.name,
-      capitals: state.capitals,
-      area: state.area,
-      description: state.description,
+      company: state.company,
+      position: state.position,
+      city: state.city,
+      salary: state.salary,
+      jobDescription: state.jobDescription,
     }
     api
       .addCountry(data)
       .then(result => {
         console.log('SUCCESS!')
         setState({
-          name: '',
-          capitals: '',
-          area: '',
-          description: '',
+          company: '',
+          position:'',
+          city: '',
+          salary: '',
+          jobDescription: '',
+
         })
-        setMessage(`Your country '${state.name}' has been created`)
+        setMessage(`Your job'${state.company}' has been created`)
         setTimeout(() => {
           setMessage(null)
         }, 2000)
@@ -47,42 +51,51 @@ export default function AddCountry(props) {
   }
   return (
     <div className="AddCountry">
-      <h2>Add country</h2>
+      <h2>Add job</h2>
       <form>
-        Name:{' '}
+        Company:{' '}
         <input
           type="text"
-          value={state.name}
-          name="name"
+          value={state.company}
+          name="company"
           onChange={handleInputChange}
         />{' '}
         <br />
-        Capitals:{' '}
+        Position:{' '}
         <input
           type="text"
-          value={state.capitals}
-          name="capitals"
+          value={state.position}
+          name="position"
           onChange={handleInputChange}
         />{' '}
         <br />
-        Area:{' '}
+        City:{' '}
+        <input
+          type="text"
+          value={state.city}
+          name="city"
+          onChange={handleInputChange}
+        />{' '}
+        <br />
+        Salary:{' '}
         <input
           type="number"
-          value={state.area}
-          name="area"
+          value={state.salary}
+          name="salary"
           onChange={handleInputChange}
-        />{' '}
+         
+        />
         <br />
-        Description:{' '}
+        Job description:{' '}
         <textarea
-          value={state.description}
-          name="description"
+          value={state.jobDescription}
+          name="jobDescription"
           cols="30"
           rows="10"
           onChange={handleInputChange}
         />{' '}
         <br />
-        <button onClick={e => handleClick(e)}>Create country</button>
+        <button onClick={e => handleClick(e)}>Create Job</button>
       </form>
       {message && <div className="info">{message}</div>}
     </div>
