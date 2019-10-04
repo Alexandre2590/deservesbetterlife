@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../api'
 
-const pays = {
-  USA:
-    'https://odis.homeaway.com/odis/destination/c4947c06-f0f9-4d37-b5c6-7966cba2b94f.hw5.jpg',
-  FRA:
-    'https://cdn.paris.fr/paris/2019/07/24/huge-550a23487012018a10eeed9bdfa561c8.jpeg',
-}
+// const pays = {
+//   USA:
+//     'https://odis.homeaway.com/odis/destination/c4947c06-f0f9-4d37-b5c6-7966cba2b94f.hw5.jpg',
+//   FRA:
+//     'https://cdn.paris.fr/paris/2019/07/24/huge-550a23487012018a10eeed9bdfa561c8.jpeg',
+// }
 
 export default function Countries() {
   const [countries, setCountries] = useState([])

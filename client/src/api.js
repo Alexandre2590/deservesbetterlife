@@ -75,9 +75,16 @@ export default {
       .catch(errHandler)
   },
 
-  addCountry(body) {
+  getJobs() {
     return service
-      .post('/countries', body)
+      .get('/jobs')
+      .then(res => res.data)
+      .catch(errHandler)
+  },
+
+  addJob(body) {
+    return service
+      .post('/jobs', body)
       .then(res => res.data)
       .catch(errHandler)
   },

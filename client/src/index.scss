@@ -146,6 +146,8 @@ body {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9dbfaf;
+
+
 }
 
 .searchTerm:focus {
@@ -162,6 +164,10 @@ body {
   border-radius: 0 3px 3px 0;
   cursor: pointer;
   font-size: 20px;
+}
+.jobs {
+  width: 100%;
+  background-color: #e73f3f;
 }
 
 /*Resize the wrap to see the search bar change!*/
@@ -184,12 +190,13 @@ body {
   margin: auto;
 }
 
-.imagePays{
- margin-left: 0px;
+.imagePays {
+  margin-left: 0px;
 }
 
 ul {
-  list-style:none;
-  margin-left:0;
-  padding-left:0;
-  } 
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+

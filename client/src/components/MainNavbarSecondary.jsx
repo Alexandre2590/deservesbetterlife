@@ -11,13 +11,13 @@ function MainNavbar(props) {
   return (
     <>
     <nav className="App-header1">
-    <img src={logo} className="App-logo1" alt="logo" />
+   <img src={logo} className="App-logo1" alt="logo" />
     <nav className="App-header1-2">
     <NavLink to="/" exact>
         Home
       </NavLink>
       <NavLink to="/countries">Countries</NavLink>
-      <NavLink to="/add-country">Add country</NavLink>
+      <NavLink to="/add-country">Add job</NavLink>
       {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
       {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
       {api.isLoggedIn() && (

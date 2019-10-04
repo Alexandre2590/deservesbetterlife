@@ -10,7 +10,8 @@ function MainNavbar(props) {
   }
   return (
     <>
-    <img src={logo} className="App-logo" alt="logo" />
+    {/* <a className="App-logo" href="ton_lien.html"><img src={logo} alt="logo"/></a> */}
+    <a href="./"> <img src={logo} className="App-logo" alt="logo" /></a>
     <nav className="App-header">
   
       <h1 className="App-title">DeservesBetterLife</h1>
@@ -18,7 +19,7 @@ function MainNavbar(props) {
         Home
       </NavLink>
       <NavLink to="/countries">Countries</NavLink>
-      <NavLink to="/add-country">Add country</NavLink>
+      <NavLink to="/add-country">Add job</NavLink>
       {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
       {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
       {api.isLoggedIn() && (

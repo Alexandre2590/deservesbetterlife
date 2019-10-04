@@ -11,6 +11,8 @@ const mongoose = require('mongoose')
 
 const Country = require('../models/Country')
 
+const Job = require('../models/Jobs')
+
 const bcryptSalt = 10
 
 var countries = require('../models/countrieslife')
@@ -33,3 +35,21 @@ Country.deleteMany()
     mongoose.disconnect()
     throw err
   })
+/*
+  Job.deleteMany()
+  .then(() => {
+    return Jobs.create(jobs)
+  })
+  .then(jobs => {
+    console.log(`${jobs.length} Jobs created with the following id:`)
+    console.log(jobs.map(u => u._id))
+  })
+  .then(() => {
+    // Close properly the connection to Mongoose
+    mongoose.disconnect()
+  })
+  .catch(err => {
+    mongoose.disconnect()
+    throw err
+  })
+*/

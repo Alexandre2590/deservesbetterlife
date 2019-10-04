@@ -53,6 +53,7 @@ app.use(
 require('./passport')(app)
 
 app.use('/api', require('./routes/index'))
+app.use('/api/jobs', require('./routes/Jobs'))
 app.use('/api', require('./routes/auth'))
 app.use('/api/countries', require('./routes/countries'))
 
@@ -83,5 +84,10 @@ app.use((err, req, res, next) => {
       res.json(JSON.parse(JSON.stringify(err, Object.getOwnPropertyNames(err))))
   }
 })
+
+
+ 
+
+
 
 module.exports = app

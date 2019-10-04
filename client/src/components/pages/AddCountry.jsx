@@ -5,6 +5,7 @@ export default function AddCountry(props) {
   const [state, setState] = useState({
     company: '',
     position: '',
+    country:'',
     city: '',
     salary: '',
     jobDescription: '',
@@ -26,21 +27,22 @@ export default function AddCountry(props) {
     let data = {
       company: state.company,
       position: state.position,
+      country: state.country,
       city: state.city,
       salary: state.salary,
       jobDescription: state.jobDescription,
     }
     api
-      .addCountry(data)
+      .addJob(data)
       .then(result => {
         console.log('SUCCESS!')
         setState({
           company: '',
-          position:'',
+          position: '',
+          country:'',
           city: '',
           salary: '',
           jobDescription: '',
-
         })
         setMessage(`Your job'${state.company}' has been created`)
         setTimeout(() => {
@@ -68,6 +70,13 @@ export default function AddCountry(props) {
           name="position"
           onChange={handleInputChange}
         />{' '}
+        <br /> Country:{' '}
+        <input
+          type="text"
+          value={state.country}
+          name="country"
+          onChange={handleInputChange}
+        />{' '}
         <br />
         City:{' '}
         <input
@@ -83,7 +92,6 @@ export default function AddCountry(props) {
           value={state.salary}
           name="salary"
           onChange={handleInputChange}
-         
         />
         <br />
         Job description:{' '}
