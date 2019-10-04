@@ -1,6 +1,5 @@
 import React, { useState, Component } from 'react'
 import api from '../../api'
-import { LinkedIn } from 'react-linkedin-login-oauth2';
 
 export default function Signup(props) {
   const [state, setState] = useState({
@@ -69,15 +68,11 @@ export default function Signup(props) {
 
 /////
 
-
-
-
 // class LinkedInPage extends Component {
 //   state = {
 //     code: '',
 //     errorMessage: '',
 //   };
-
 
 //   handleSuccess = (data) => {
 //     this.setState({
@@ -92,7 +87,7 @@ export default function Signup(props) {
 //       errorMessage: error.errorMessage,
 //     });
 //   }
-  
+
 //   render() {
 //     const { code, errorMessage } = this.state;
 //     return (
