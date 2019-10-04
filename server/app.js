@@ -1,6 +1,6 @@
 const path = require('path')
 require('dotenv').config({ path: path.join(__dirname, '.env') })
-
+require('./bin/seeds')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
@@ -84,10 +84,5 @@ app.use((err, req, res, next) => {
       res.json(JSON.parse(JSON.stringify(err, Object.getOwnPropertyNames(err))))
   }
 })
-
-
- 
-
-
 
 module.exports = app

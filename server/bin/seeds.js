@@ -1,6 +1,6 @@
 const path = require('path')
-require('dotenv').config({ path: path.join(__dirname, '../.env') })
-require('../configs/database')
+// require('dotenv').config({ path: path.join(__dirname, '../.env') })
+// require('../configs/database')
 
 // Seeds file that remove all users and create 2 new users
 
@@ -10,10 +10,6 @@ require('../configs/database')
 const mongoose = require('mongoose')
 
 const Country = require('../models/Country')
-
-const Job = require('../models/Jobs')
-
-const bcryptSalt = 10
 
 var countries = require('../models/countrieslife')
 
